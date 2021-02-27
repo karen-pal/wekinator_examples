@@ -1,4 +1,4 @@
-# Python - Wekinator
+# Python examples ⇴  Wekinator
 > by Karen Palacio.
 
 # Introduction
@@ -18,8 +18,8 @@ to use any example
 `python3 <example_file_name>.py`
 # Examples listing:
 
-## Inputs:
+## ➼ Inputs:
 - `sender.py`: simple 1 input sender. Sends a number to wekinator.
-## Outputs:
+## ↜ Outputs:
 - `server.py` : simple 1 output osc server to use as template. Just prints the recieved float, which can be a number from 0 to 1.
 - `window.py`: waits for 3 outputs from wekinator. Takes 3 floats from [0,1] and transforms each to [0,256] int values, and draws the resulting color on a window!

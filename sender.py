@@ -28,9 +28,12 @@ if __name__ == "__main__":
   client = udp_client.SimpleUDPClient(args.ip, args.port)
 
   while True:
-    thing = my_thing()
-    client.send_message("/wek/inputs", float(thing))
-    print(f'sent {thing}')
+    try:
+      in_number = float(input().split("\n")[0])
+    except:
+        print("I only want numbers")
+    client.send_message("/wek/inputs", float(in_number))
+    print(f'sent {in_number} to {args.ip}:{args.port}')
     time.sleep(1)
 
 

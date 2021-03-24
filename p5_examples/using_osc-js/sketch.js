@@ -19,7 +19,10 @@ function draw() {
 
 function mouseMoved() {
   let normX = map(mouseX, 0, width, 0, 1);
-  print(normX.toString());
-  var message = new OSC.Message('/test/', normX.toString());
-  osc.send(message);  //send message on click
+
+  //to send as string:
+  //let message = new OSC.Message('/test/', normX.toString());
+  //to send as float:
+  let message = new OSC.Message('/test/',normX);
+  osc.send(message);  //send message on mouse movement
 }

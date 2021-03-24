@@ -4,8 +4,13 @@ kicked = True
 encoding = 'windows-1252'
 class SimpleEcho(WebSocket):
     def handle(self):
-        thing = struct.unpack('>f', self.data[12:])
-        print(thing[0])
+        # get osc channel
+        channel = self.data[0:5].decode('utf-8')
+        # get message type
+        msg_type = self.data[9:10].decode('utf-8')
+        #get number
+        number = struct.unpack('>f', self.data[12:])[0]
+        print("msg from "+channel+ ". type: "+msg_type +", with value:>>", number)
         #self.send_message(self.data)
 
     def connected(self):

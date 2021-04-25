@@ -24,6 +24,7 @@ to use any example
 - `sender.py`: simple 1 input sender. Sends a number to wekinator.
 - `p5_examples/sketch.js`: 1 input sender. Sends mouseX as a string (WIP) (TODO: pls make it  a float)
 - `p5_examples/re_router.py`: Receives p5 inputs from the broswer (through OSC/websockets) and sends them back to wekinator (through OSC/udp), mantaining channel information. Based on `p5_examples/server_websocket_osc.py`
+- `p5_examples/router.py`: Receives 3 p5 inputs from the broswer (through OSC/websockets) and sends them back to blender (through OSC/udp), mantaining channel information. Based on `p5_examples/re_router.py`. Now with multichannel feature, this server allows to handle **many blender variables with p5**!
 
 ## ↜ Outputs:
 - `server.py` : simple 1 output osc server to use as template. Just prints the recieved float, which can be a number from 0 to 1.
